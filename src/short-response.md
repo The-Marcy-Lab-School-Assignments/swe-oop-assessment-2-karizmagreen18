@@ -23,18 +23,18 @@ Provide a code snippet to illustrate _encapsulation_.
 
 Code Snippet:
 
----class Library{
+---class Library {
     #Book = []
-    constructor(name){
+    constructor(name) {
     this.name = name
     }
-    addBook(book){
+    addBook(book) {
     this.#Book.push(new Book(book))
     }
-    listAvailableBooks(){
+    listAvailableBooks() {
     return this.#Book.filter((book) => book.isAvailable === true)
     }
-    findBook(title){
+    findBook(title) {
     this.#Book.find((book) => book.title === title)
     }
     removeBook(title) {
