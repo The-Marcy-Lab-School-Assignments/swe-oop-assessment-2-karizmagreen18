@@ -33,7 +33,7 @@ class BankAccount {
 }
 // balance within this code was missing #
 // #totalNumberOfAccounts is not defined you need to make it a static and it is also private
-
+// Bank is missing the this keyword
 class Bank {
   accounts = [];
   constructor(name) {
@@ -41,7 +41,7 @@ class Bank {
   }
 
   addAccount(account) {
-    accounts.push(account);
+    this.accounts.push(account);
   }
 
   getTotalBalance() {
@@ -53,7 +53,7 @@ class Bank {
   }
 
   findAccount(accountNumber) {
-    return accounts.find((account) => account.accountNumber = accountNumber);
+    return this.accounts.find((account) => account.accountNumber = accountNumber);
   }
 }
 
